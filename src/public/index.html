@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Robotica</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <br>
+            <div class="alert alert-warning" role="alert">
+              <h1>Broker MQTT</h1>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="margin: 50px 0;">
+            <div style="margin-top: 20px;">   
+              <button type="button" class="btn btn-danger" style="width: 120px;" id="botonA">Led Rojo</button>
+            </div>
+            <div style="margin-top: 20px;">   
+              <button type="button" class="btn btn-primary" style="width: 120px;" id="botonB">Led Azul</button>  
+            </div>
+          </div>
+          <div class="scrollbar scrollbar-primary"  id="ContenedorScrollBar1">
+            <div class="force-overflow"  id="scrollBar1"></div>
+          </div>
+          <div class="scrollbar scrollbar-secondary"  id="ContenedorScrollBar2">
+            <div class="force-overflow"  id="scrollBar2"></div>
+          </div>
+          <div class="scrollbar scrollbar-default"  id="ContenedorScrollBar3">
+            <div class="force-overflow"  id="scrollBar3"></div>
+          </div>
+          <div class="scrollbar scrollbar-success"  id="ContenedorScrollBar4">
+            <div class="force-overflow"  id="scrollBar4"></div>
+          </div>
+          <div class="scrollbar scrollbar-warning"  id="ContenedorScrollBar5">
+            <div class="force-overflow"  id="scrollBar5"></div>
+          </div>
+          <div class="scrollbar scrollbar-danger"  id="ContenedorScrollBar6">
+            <div class="force-overflow"  id="scrollBar6"></div>
+          </div>
+          
+        </div>
+        <div>
+          <br>
+        </div>
+      <div class="border" style="padding: 10px;">
+        
+        <form>
+          <div class="alert alert-warning" role="alert">
+            Gestor de la comunicacion MQTT
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Topic:</label>
+            <input type="text" class="form-control" id="txtTopic" placeholder="Ingrese el topic">
+          </div>
+          <button type="button" class="btn btn-primary" id="btnSuscribirse">Suscribirse</button>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">Mensajes:</label>
+            <select multiple class="form-control" id="listaDeMensajes" style="overflow-y: auto;">
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Mensaje:</label>
+            <input type="text" class="form-control" id="txtMensaje" placeholder="Ingrese el mensaje enviar">
+          </div>
+          <button type="button" class="btn btn-primary" id="btnEnviar">Enviar</button>
+        </form>
+      </div>
+      </div>
+</body>
+<div> 
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/botones.js"></script>
+</div>
+
+</html>
